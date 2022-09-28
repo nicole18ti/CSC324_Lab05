@@ -7,6 +7,7 @@ public class MainClass {
 
         private double gpa;
 
+        
         @Override
         public String toString() {
             String retString;
