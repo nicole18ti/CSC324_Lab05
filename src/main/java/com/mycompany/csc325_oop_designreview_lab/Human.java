@@ -1,9 +1,6 @@
 package com.mycompany.csc325_oop_designreview_lab;
 
-/**
- *
- * @author MoaathAlrajab
- */
+
 public abstract class Human {
     private String name;
 	private String address;
