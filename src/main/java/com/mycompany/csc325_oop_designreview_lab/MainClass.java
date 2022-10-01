@@ -1,48 +1,40 @@
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 public class MainClass {
-
-    // Create two classes for Freshman and Senior
-    public class Freshman {
-
-        private double gpa;
-
-        
-        @Override
-        public String toString() {
-            String retString;
-            retString = String.format("%,.1f", gpa);
-            return retString;
-        }
-    }
-
-    public class Senior {
-
-        int credit;
-        
-
-    }
 
     public static void main(String[] args) {
 
-        // ToDo 5: Fix the error
-        // ToDo 6: Fix the constructor of Student class
-        // Todo 7: Create two classes for Freshman and Senior 
-        // ToDo 8: The senior class should have a minimum of 85 credits  
-        // ToDo 9: Add a toString method for Freshman class
-        // ToDo 10: Add a toString method for Senior class
-        Freshman std1 = new Student("James", 20, 12); // name, age, credits
+        Scanner scanner = new Scanner(System.in); // scanner for user to input data
+        double gpa = 0;
 
-        Senior std2 = new Student("John", 30, 90);
+        // ToDo 5: Fix the error - done
+        // ToDo 6: Fix the constructor of Student class - done
+        // Todo 7: Create two classes for Freshman and Senior - done
+        // ToDo 8: The senior class should have a minimum of 85 credits  - done
+        // ToDo 9: Add a toString method for Freshman class - done
+        // ToDo 10: Add a toString method for Senior class - done
+        Student s1 = new Freshman("James", (short) 20, 12); // name, age, credits
+
+        Student s2 = new Senior("John", (short) 30, 90);
+
+        System.out.print("Please enter  " + s1.getName() + " GPA: ");
+        double input1 = scanner.nextDouble();
+        s1.setGPA(input1);
+
+        System.out.print("Please enter  " + s2.getName() + " GPA: ");
+        double input2 = scanner.nextDouble();
+        s2.setGPA(input2);
 
         // ToDo 11: Set the gpa of the student using the scanner and user
-        // 			input and then print the output.
-        System.out.println(std1);
+        // 			input and then print the output. - done
+        System.out.println(s1);
 
-        System.out.println(std2);
+        System.out.println(s2);
 
-        // ToDo 12: add comments and explain your code
-        // ToDo 13: submit using a pull request.
+        // ToDo 12: add comments and explain your code - done
+        // ToDo 13: submit using a pull request. 
     }
 
 }
